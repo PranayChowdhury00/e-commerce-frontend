@@ -31,7 +31,6 @@ const Navbar = () => {
       .catch((err) => console.log(err));
   }, [user?.email]);
   
-  // Check if user is an admin or seller
   const isAdmin = userData?.some(
     (data) => data.email === user?.email && data.status === "admin"
   );
@@ -39,17 +38,15 @@ const Navbar = () => {
     (data) => data.email === user?.email && data.status === "seller"
   );
 
-  // Fetch notifications based on the user role (example: seller notifications)
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`https://e-commerce-backend-fg1k.onrender.com/seller/${user.email}`) // Adjust the API URL to match your backend
-        .then((res) => setNotifications(res.data)) // Assume the response contains the list of notifications
+        .get(`https://e-commerce-backend-fg1k.onrender.com/seller/${user.email}`)
+        .then((res) => setNotifications(res.data))
         .catch((err) => console.log(err));
     }
   }, [user?.email]);
 
-  // Categories
   const categories = [
     { name: "Home", path: "/" },
     { name: "Electronics", path: "/electronics" },
@@ -57,7 +54,6 @@ const Navbar = () => {
     { name: "Home & Garden", path: "/home-garden" },
   ];
 
-  // Add Seller link for logged-in users who are not admins
   if (user && !isAdmin) {
     categories.push({ name: "Seller", path: "/seller" });
   }
@@ -110,7 +106,7 @@ const Navbar = () => {
     <nav className="bg-white sticky top-0 z-50 shadow-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Mobile Menu */}
+          {/* Mobile Menu and Logo */}
           <div className="flex items-center">
             <div className="dropdown lg:hidden">
               <label tabIndex={0} className="btn btn-ghost p-2">
@@ -137,7 +133,6 @@ const Navbar = () => {
               </ul>
             </div>
 
-            {/* Logo */}
             <Link to="/" className="text-xl font-bold flex items-center gap-1">
               <span className="text-primary">ShopEE</span>
             </Link>
@@ -160,9 +155,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Search */}
-          <div className="flex-1 max-w-md mx-4">
-            <form onSubmit={handleSearch} className="relative">
+          {/* Search - Hidden on small screens, visible from medium */}
+          <div className="hidden md:flex flex-1 max-w-md mx-4">
+            <form onSubmit={handleSearch} className="relative w-full">
               <input
                 type="text"
                 placeholder="Search products..."
@@ -179,18 +174,19 @@ const Navbar = () => {
             </form>
           </div>
 
-          {/* Icons */}
-          <div className="flex items-center gap-2">
-            <Link to="/notifications" className="btn btn-ghost btn-circle">
+          {/* Icons - Adjusted spacing for small screens */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            {/* Notifications - Hidden on small screens */}
+            <Link to="/notifications" className="hidden sm:flex btn btn-ghost btn-circle">
               <div className="indicator">
                 <IoMdNotificationsOutline className="h-5 w-5" />
-                {/* Show the number of notifications */}
                 <span className="badge badge-sm indicator-item bg-primary text-white">
-                  {user ? notifications.length : 0} {/* This will show the number of notifications */}
+                  {user ? notifications.length : 0}
                 </span>
               </div>
             </Link>
 
+            {/* Wishlist */}
             <Link to="/wishlist" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <FaHeart className="h-5 w-5" />
@@ -200,6 +196,7 @@ const Navbar = () => {
               </div>
             </Link>
 
+            {/* Cart */}
             <Link to="/cart" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <FaShoppingCart className="h-5 w-5" />
@@ -262,6 +259,25 @@ const Navbar = () => {
               </Link>
             )}
           </div>
+        </div>
+
+        {/* Mobile Search - Visible only on small screens */}
+        <div className="md:hidden pb-3 px-2">
+          <form onSubmit={handleSearch} className="relative">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="input input-bordered w-full pr-10 focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="absolute right-0 top-0 h-full px-3 bg-primary text-white rounded-r-md"
+            >
+              <FaSearch className="h-4 w-4" />
+            </button>
+          </form>
         </div>
       </div>
     </nav>
