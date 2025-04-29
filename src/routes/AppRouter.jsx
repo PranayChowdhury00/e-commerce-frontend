@@ -37,6 +37,8 @@ import PaymentPage from "../pages/Payment/PaymentPage";
 import Orders from "../pages/Dashboard/AdminDashBoard/Orders";
 import AllPayment from "../pages/Dashboard/AdminDashBoard/AllPayment";
 import SettingsPage from "../pages/Dashboard/AdminDashBoard/SettingsPage";
+import SearchPage from "../pages/Home/SearchPage";
+import ProductDetails2 from "../pages/Home/ProductDetails2";
 
 
   const router = createBrowserRouter([
@@ -95,6 +97,14 @@ import SettingsPage from "../pages/Dashboard/AdminDashBoard/SettingsPage";
         {
           path:'/checkout',
           element:<PaymentPage></PaymentPage>
+        },
+        {
+          path:'/search',
+          element:<SearchPage></SearchPage>
+        },
+        {
+          path:'/product-info/:id',
+          element:<ProductDetails2></ProductDetails2>
         }
 
       ]

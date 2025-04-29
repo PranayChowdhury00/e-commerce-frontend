@@ -83,6 +83,7 @@ const Navbar = () => {
       setSearchQuery("");
     }
   };
+  
 
   useEffect(() => {
     if (user?.email) {
