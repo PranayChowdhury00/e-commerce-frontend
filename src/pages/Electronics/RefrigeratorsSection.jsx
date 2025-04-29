@@ -15,7 +15,7 @@ const RefrigeratorsSection = () => {
   // Load products
   useEffect(() => {
     axios
-      .get('http://localhost:5000/refrigerators')
+      .get('https://e-commerce-backend-fg1k.onrender.com/refrigerators')
       .then((response) => {
         setProducts(response.data);
         setLoading(false);

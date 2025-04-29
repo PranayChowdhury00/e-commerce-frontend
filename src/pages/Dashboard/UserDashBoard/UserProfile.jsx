@@ -15,7 +15,7 @@ const UserProfile = () => {
     useEffect(() => {
         if (email) {
             setLoading(true);
-            axios.get(`http://localhost:5000/users/${email}`)
+            axios.get(`https://e-commerce-backend-fg1k.onrender.com/users/${email}`)
                 .then((response) => {
                     setData(response.data);
                     setLoading(false);
@@ -54,9 +54,9 @@ const UserProfile = () => {
         }
 
         try {
-            await axios.patch(`http://localhost:5000/users/${email}`, updatedFields);
+            await axios.patch(`https://e-commerce-backend-fg1k.onrender.com/users/${email}`, updatedFields);
             // Refresh data
-            const response = await axios.get(`http://localhost:5000/users/${email}`);
+            const response = await axios.get(`https://e-commerce-backend-fg1k.onrender.com/users/${email}`);
             setData(response.data);
             setIsModalOpen(false);
         } catch (error) {

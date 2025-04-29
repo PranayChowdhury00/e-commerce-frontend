@@ -11,7 +11,7 @@ const PaymentInfo = () => {
         if (user?.email) {
             setLoading(true);
             axios
-                .get(`http://localhost:5000/payment/${user.email}`)
+                .get(`https://e-commerce-backend-fg1k.onrender.com/payment/${user.email}`)
                 .then((res) => {
                     setPayments(res.data);
                     setLoading(false);

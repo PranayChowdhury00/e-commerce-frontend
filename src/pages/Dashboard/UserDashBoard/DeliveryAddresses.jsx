@@ -29,7 +29,7 @@ const DeliveryAddresses = () => {
     // Fetch existing addresses
     React.useEffect(() => {
         if (user?.email) {
-            axios.get(`http://localhost:5000/addresses/${user.email}`)
+            axios.get(`https://e-commerce-backend-fg1k.onrender.com/addresses/${user.email}`)
                 .then(res => {
                     setAddresses(res.data);
                     setLoading(false);
@@ -96,8 +96,8 @@ const DeliveryAddresses = () => {
         };
 
         const request = isEditing && currentAddress
-            ? axios.put(`http://localhost:5000/addresses/${currentAddress._id}`, addressData)
-            : axios.post('http://localhost:5000/addresses', addressData);
+            ? axios.put(`https://e-commerce-backend-fg1k.onrender.com/addresses/${currentAddress._id}`, addressData)
+            : axios.post('https://e-commerce-backend-fg1k.onrender.com/addresses', addressData);
 
             request.then(res => {
                 if (isEditing) {
@@ -173,7 +173,7 @@ const DeliveryAddresses = () => {
                 // Optimistically update the UI
                 setAddresses(previousAddresses.filter(addr => addr._id !== id));
                 
-                axios.delete(`http://localhost:5000/addresses/${id}`)
+                axios.delete(`https://e-commerce-backend-fg1k.onrender.com/addresses/${id}`)
                     .then(() => {
                         Swal.fire(
                             'Deleted!',

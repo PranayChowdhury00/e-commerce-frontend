@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
   const { user } = useContext(AuthContext); // Assuming you have AuthContext set up
   useEffect(() => {
     axios
-      .get("http://localhost:5000/featuredItems")
+      .get("https://e-commerce-backend-fg1k.onrender.com/featuredItems")
       .then((res) => {
         setFeaturedItems(res.data);
       })

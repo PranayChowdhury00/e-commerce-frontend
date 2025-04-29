@@ -30,7 +30,7 @@ const AddProducts = () => {
     e.preventDefault();
     console.log(formData);
     // Here you will send formData to the database (axios.post or fetch)
-    axios.post("http://localhost:5000/sellerProducts", formData)
+    axios.post("https://e-commerce-backend-fg1k.onrender.com/sellerProducts", formData)
       .then((response) => {
         Swal.fire({
             position: "top-end",

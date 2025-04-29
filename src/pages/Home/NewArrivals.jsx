@@ -5,7 +5,7 @@ const NewArrivals = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/newArrivals")
+    axios.get("https://e-commerce-backend-fg1k.onrender.com/newArrivals")
       .then(res => setItems(res.data))
       .catch(err => console.error("Error fetching new arrivals:", err));
   }, []);

@@ -35,7 +35,7 @@ const FashionDeals = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/cartItems', cartItem);
+      const response = await axios.post('https://e-commerce-backend-fg1k.onrender.com/cartItems', cartItem);
       if (response.data.insertedId || response.data.success) {
         Swal.fire({
           title: 'Added!',

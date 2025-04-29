@@ -14,7 +14,7 @@ const AllUsers = () => {
   const fetchUsers = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/users")
+      .get("https://e-commerce-backend-fg1k.onrender.com/users")
       .then((res) => {
         setUsers(res.data);
         setLoading(false);
@@ -42,7 +42,7 @@ const AllUsers = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/users/${id}`)
+          .delete(`https://e-commerce-backend-fg1k.onrender.com/users/${id}`)
           .then(() => {
             Swal.fire("Deleted!", "User has been deleted.", "success");
             fetchUsers();
@@ -77,7 +77,7 @@ const AllUsers = () => {
       if (result.isConfirmed) {
         const updatedStatus = result.value;
         axios
-          .patch(`http://localhost:5000/users/${id}`, { status: updatedStatus })
+          .patch(`https://e-commerce-backend-fg1k.onrender.com/users/${id}`, { status: updatedStatus })
           .then(() => {
             Swal.fire("Success", "User role updated!", "success");
             fetchUsers();

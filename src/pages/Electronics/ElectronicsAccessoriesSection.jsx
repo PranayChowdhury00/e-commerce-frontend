@@ -31,7 +31,7 @@ const email = user?.email;
 
   // Load products
   useEffect(() => {
-    axios.get('http://localhost:5000/ElectronicsAccessorie')
+    axios.get('https://e-commerce-backend-fg1k.onrender.com/ElectronicsAccessorie')
     .then(response => {
       setProducts(response.data);
         setLoading(false);
@@ -80,7 +80,7 @@ const email = user?.email;
     const email = user.email;
     const isInWishlist = wishlist.includes(productId);
   
-    axios.post("http://localhost:5000/wishList", { productId, email })
+    axios.post("https://e-commerce-backend-fg1k.onrender.com/wishList", { productId, email })
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({

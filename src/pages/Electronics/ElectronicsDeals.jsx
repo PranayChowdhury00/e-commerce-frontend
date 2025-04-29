@@ -14,7 +14,7 @@ const ElectronicsDeals = () => {
 
   // Load products (in a real app, this would be an API call)
   useEffect(() => {
-    axios.get("http://localhost:5000/electronicsDealsCoolingAc")
+    axios.get("https://e-commerce-backend-fg1k.onrender.com/electronicsDealsCoolingAc")
     .then(response => {
       setProducts(response.data);
         setLoading(false);

@@ -8,7 +8,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/ElectronicsItem/${id}`)
+      .get(`https://e-commerce-backend-fg1k.onrender.com/ElectronicsItem/${id}`)
       .then((response) => {
         setProduct(response.data);
       })

@@ -15,7 +15,7 @@ const WashingMachinesSection = () => {
   // Load products
   useEffect(() => {
   
-     axios.get('http://localhost:5000/WashingMachines')
+     axios.get('https://e-commerce-backend-fg1k.onrender.com/WashingMachines')
      .then(response =>{
          setProducts(response.data);
          setLoading(false);

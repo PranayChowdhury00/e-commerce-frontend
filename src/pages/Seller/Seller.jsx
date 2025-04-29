@@ -53,7 +53,7 @@ const Seller = () => {
       };
     
       
-    axios.post("http://localhost:5000/seller",{sellerData})
+    axios.post("https://e-commerce-backend-fg1k.onrender.com/seller",{sellerData})
       .then((res) => {
         if (res.data.insertedId) {
             Swal.fire({

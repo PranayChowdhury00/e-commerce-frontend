@@ -14,7 +14,7 @@ const SellerRequest = () => {
 
   const fetchSellers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/seller', { withCredentials: true });
+      const res = await axios.get('https://e-commerce-backend-fg1k.onrender.com/seller', { withCredentials: true });
       setSellers(res.data);
     } catch (error) {
       console.error(error);
@@ -44,7 +44,7 @@ const SellerRequest = () => {
             didOpen: () => Swal.showLoading(),
           });
 
-          await axios.patch(`http://localhost:5000/seller/${id}`, { status }, { withCredentials: true });
+          await axios.patch(`https://e-commerce-backend-fg1k.onrender.com/seller/${id}`, { status }, { withCredentials: true });
 
           Swal.fire({
             title: 'Success!',

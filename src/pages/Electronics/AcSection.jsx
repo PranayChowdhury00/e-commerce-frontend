@@ -8,7 +8,7 @@ const AcSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/ElectronicsItemAc")
+      .get("https://e-commerce-backend-fg1k.onrender.com/ElectronicsItemAc")
       .then((response) => {
         setAcItems(response.data);
       })

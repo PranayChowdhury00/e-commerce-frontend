@@ -11,7 +11,7 @@ const CategoryPage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/categoryPage")
+    axios.get("https://e-commerce-backend-fg1k.onrender.com/categoryPage")
     .then(res=>setFilteredProducts(res.data))
     .catch(err=>console.log(err))
   },[])

@@ -12,7 +12,7 @@ const FeaturedSellerItems = () => {
     AOS.init({ duration: 1000 });
 
     // Fetch data from your backend
-    axios.get("http://localhost:5000/sellerProducts")
+    axios.get("https://e-commerce-backend-fg1k.onrender.com/sellerProducts")
       .then(res => {
         setItems(res.data);
       })

@@ -18,7 +18,7 @@ const ContactUs = () => {
   });
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://e-commerce-backend-fg1k.onrender.com/users")
       .then((res) => setUserData(res.data))
       .catch((err) => console.log(err));
   }, [user?.email]);
@@ -53,7 +53,7 @@ const ContactUs = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/userIssue",
+        "https://e-commerce-backend-fg1k.onrender.com/userIssue",
         formData
       );
 

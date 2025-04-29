@@ -26,7 +26,7 @@ const CategoryProducts = () => {
 
     const fetchProducts = () => {
         setLoading(true);
-        axios.get("http://localhost:5000/categoryPage")
+        axios.get("https://e-commerce-backend-fg1k.onrender.com/categoryPage")
             .then((res) => {
                 setProducts(res.data);
                 setLoading(false);
@@ -55,7 +55,7 @@ const CategoryProducts = () => {
         
         if (isEditing) {
             // Update existing product
-            axios.patch(`http://localhost:5000/categoryPage/${currentProduct._id}`, formData)
+            axios.patch(`https://e-commerce-backend-fg1k.onrender.com/categoryPage/${currentProduct._id}`, formData)
                 .then(() => {
                     Swal.fire({
                         title: "Success!",
@@ -75,7 +75,7 @@ const CategoryProducts = () => {
                 });
         } else {
             // Add new product
-            axios.post("http://localhost:5000/categoryPage", formData)
+            axios.post("https://e-commerce-backend-fg1k.onrender.com/categoryPage", formData)
                 .then(() => {
                     Swal.fire({
                         title: "Success!",
@@ -137,7 +137,7 @@ const CategoryProducts = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:5000/categoryPage/${id}`)
+                axios.delete(`https://e-commerce-backend-fg1k.onrender.com/categoryPage/${id}`)
                     .then(() => {
                         Swal.fire({
                             title: "Deleted!",

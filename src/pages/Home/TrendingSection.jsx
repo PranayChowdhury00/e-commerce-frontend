@@ -7,7 +7,7 @@ const TrendingSection = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
-    fetch('http://localhost:5000/trendingProducts')
+    fetch('https://e-commerce-backend-fg1k.onrender.com/trendingProducts')
       .then(res => res.json())
       .then(data => setTrendingItems(data));
   }, []);

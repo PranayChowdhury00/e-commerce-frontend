@@ -20,7 +20,7 @@ console.log(cartUser[0]?.name)
       if (user?.email) {
         try {
           const res = await axios.get(
-            `http://localhost:5000/cartItems/${user.email}`
+            `https://e-commerce-backend-fg1k.onrender.com/cartItems/${user.email}`
           );
           setCartUser(res.data);
           console.log("Fetched cart items:", res.data); // Log cart items
@@ -45,7 +45,7 @@ console.log(cartUser[0]?.name)
       if (total > 0) {
         try {
           const res = await axios.post(
-            "http://localhost:5000/create-payment-intent",
+            "https://e-commerce-backend-fg1k.onrender.com/create-payment-intent",
             { price: total }
           );
           setClientSecret(res.data.clientSecret);
@@ -108,10 +108,10 @@ console.log(cartUser[0]?.name)
         productPrice:cartUser[0]?.price,
         productImage:cartUser[0]?.image,
       };
-      axios.post("http://localhost:5000/save-payment", paymentData);
+      axios.post("https://e-commerce-backend-fg1k.onrender.com/save-payment", paymentData);
       
       // Delete the cart items from the backend
-      axios.delete(`http://localhost:5000/cartItems/${idCartUser}`)
+      axios.delete(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${idCartUser}`)
         .then(() => {
           // Clear the cart UI
           setCartUser([]);

@@ -17,7 +17,7 @@ const Banner = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/ElectronicsItem")
+      .get("https://e-commerce-backend-fg1k.onrender.com/ElectronicsItem")
       .then((response) => {
         setProducts(response.data);
       })

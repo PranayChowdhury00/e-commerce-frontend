@@ -10,7 +10,7 @@ const SeasonalPicksSection = () => {
   useEffect(() => {
     const fetchSeasonalItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/homeGardenItems');
+        const response = await axios.get('https://e-commerce-backend-fg1k.onrender.com/homeGardenItems');
         // Filter or identify seasonal items (in a real app, your backend might have a 'seasonal' flag)
         const seasonal = response.data.filter(item => 
           item.name.toLowerCase().includes('holiday') || 

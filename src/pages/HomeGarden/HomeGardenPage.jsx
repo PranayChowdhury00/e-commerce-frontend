@@ -12,7 +12,7 @@ const HomeGardenPage = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/homeGardenItems');
+        const response = await axios.get('https://e-commerce-backend-fg1k.onrender.com/homeGardenItems');
         setItems(response.data);
         setLoading(false);
       } catch (err) {
@@ -39,7 +39,7 @@ const HomeGardenPage = () => {
     };
   
     // Send to backend
-    axios.post("http://localhost:5000/cartItems", cartItem)
+    axios.post("https://e-commerce-backend-fg1k.onrender.com/cartItems", cartItem)
       .then(res => {
         console.log("Item added to cart:", res.data);
         Swal.fire({

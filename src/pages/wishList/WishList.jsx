@@ -12,7 +12,7 @@ const WishList = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/wishList/${user.email}`)
+      fetch(`https://e-commerce-backend-fg1k.onrender.com/wishList/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setWishListItems(data);
@@ -28,7 +28,7 @@ const WishList = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/ElectronicsAccessorie')
+      .get('https://e-commerce-backend-fg1k.onrender.com/ElectronicsAccessorie')
       .then(res => {
         setAccessories(res.data);
         setLoadingAccessories(false);
@@ -62,11 +62,11 @@ const WishList = () => {
     };
 
     axios
-      .post("http://localhost:5000/cartItems", cartItem)
+      .post("https://e-commerce-backend-fg1k.onrender.com/cartItems", cartItem)
       .then((res) => {
         if (res.status === 201) {
           axios
-            .delete(`http://localhost:5000/wishList/${user.email}/${item._id}`)
+            .delete(`https://e-commerce-backend-fg1k.onrender.com/wishList/${user.email}/${item._id}`)
             .then(() => {
               setWishListItems((prev) =>
                 prev.filter((wishItem) => wishItem.productId !== item._id)

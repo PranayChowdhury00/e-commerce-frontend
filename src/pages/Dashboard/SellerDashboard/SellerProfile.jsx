@@ -11,7 +11,7 @@ const SellerProfile = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/users/${email}`)
+      .get(`https://e-commerce-backend-fg1k.onrender.com/users/${email}`)
       .then((res) => setSeller(res.data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));

@@ -8,7 +8,7 @@ const Notification = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/seller")
+      .get("https://e-commerce-backend-fg1k.onrender.com/seller")
 
       .then((res) => setNotification(res.data))
       .catch((err) => console.log(err))

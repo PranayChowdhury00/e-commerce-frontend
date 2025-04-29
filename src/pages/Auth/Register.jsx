@@ -44,7 +44,7 @@ const Register = () => {
   };
 
   const validateForm = () => {
-    axios.post("http://localhost:5000/users", {
+    axios.post("https://e-commerce-backend-fg1k.onrender.com/users", {
       name: formData.name,
       email: formData.email,
       photoURL: formData.photoURL,

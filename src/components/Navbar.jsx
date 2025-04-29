@@ -26,7 +26,7 @@ const Navbar = () => {
   
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://e-commerce-backend-fg1k.onrender.com/users")
       .then((res) => setUserData(res.data))
       .catch((err) => console.log(err));
   }, [user?.email]);
@@ -43,7 +43,7 @@ const Navbar = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/seller/${user.email}`) // Adjust the API URL to match your backend
+        .get(`https://e-commerce-backend-fg1k.onrender.com/seller/${user.email}`) // Adjust the API URL to match your backend
         .then((res) => setNotifications(res.data)) // Assume the response contains the list of notifications
         .catch((err) => console.log(err));
     }
@@ -91,7 +91,7 @@ const Navbar = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/cartItems/${user.email}`)
+        .get(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${user.email}`)
         .then((res) => setCartItems(res.data))
         .catch((err) => console.log(err));
     }
@@ -99,7 +99,7 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/wishList/${user?.email}`)
+      .get(`https://e-commerce-backend-fg1k.onrender.com/wishList/${user?.email}`)
       .then((res) => setWishListItems(res.data))
       .catch((err) => console.log(err));
   }, [user?.email]);

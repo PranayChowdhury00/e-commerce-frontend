@@ -12,7 +12,7 @@ const ProductDetails = () => {
 const {user}=useContext(AuthContext);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/featuredItems/${id}`)
+      .get(`https://e-commerce-backend-fg1k.onrender.com/featuredItems/${id}`)
       
       .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
@@ -30,7 +30,7 @@ const {user}=useContext(AuthContext);
     };
   
     axios
-      .post("http://localhost:5000/cartItems", cartItem)
+      .post("https://e-commerce-backend-fg1k.onrender.com/cartItems", cartItem)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({

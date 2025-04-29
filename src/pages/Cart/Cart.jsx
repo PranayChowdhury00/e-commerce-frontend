@@ -14,7 +14,7 @@ const Cart = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/cartItems/${user.email}`)
+        .get(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${user.email}`)
         .then((res) => {
           setCartItems(res.data);
           const totalPrice = res.data.reduce((acc, item) => acc + item.price, 0);
@@ -27,7 +27,7 @@ const Cart = () => {
   // Remove from cart
   const handleRemove = (id) => {
     axios
-      .delete(`http://localhost:5000/cartItems/${id}`)
+      .delete(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${id}`)
       .then((res) => {
         if (res.data.deletedCount > 0) {
           const updatedCart = cartItems.filter((item) => item._id !== id);

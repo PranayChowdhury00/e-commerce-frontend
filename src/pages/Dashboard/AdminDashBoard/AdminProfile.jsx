@@ -10,7 +10,7 @@ const AdminProfile = () => {
   useEffect(() => {
     if (email) {
       axios
-        .get(`http://localhost:5000/users/${email}`)
+        .get(`https://e-commerce-backend-fg1k.onrender.com/users/${email}`)
         .then((res) => setUserData(res.data))
         .catch((err) => console.error("Error fetching user:", err));
     }

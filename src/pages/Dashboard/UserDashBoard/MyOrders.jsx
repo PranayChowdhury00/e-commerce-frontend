@@ -11,7 +11,7 @@ const MyOrders = () => {
     if (user?.email) {
       setLoading(true);
       axios
-        .get(`http://localhost:5000/payment/${user.email}`)
+        .get(`/payment/${user.email}`)
         .then((res) => {
           setOrders(res.data);
           setLoading(false);
@@ -39,7 +39,7 @@ const MyOrders = () => {
       confirmButtonText: 'Yes, cancel it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/save-payment/${id}`)
+        axios.delete(`https://e-commerce-backend-fg1k.onrender.com/save-payment/${id}`)
           .then(res => {
             if (res.data.deletedCount > 0) {
               Swal.fire(

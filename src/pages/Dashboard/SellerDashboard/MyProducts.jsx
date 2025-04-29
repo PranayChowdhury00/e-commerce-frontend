@@ -23,7 +23,7 @@ const MyProducts = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/sellerProducts/${email}`)
+        fetch(`https://e-commerce-backend-fg1k.onrender.com/sellerProducts/${email}`)
             .then(res => res.json())
             .then(data => setProducts(data))
             .catch(err => console.log(err))
@@ -41,7 +41,7 @@ const MyProducts = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:5000/sellerProducts/${id}`)
+                axios.delete(`https://e-commerce-backend-fg1k.onrender.com/sellerProducts/${id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             const remaining = products.filter(product => product._id !== id);
@@ -90,7 +90,7 @@ const MyProducts = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.patch(`http://localhost:5000/sellerProducts/${selectedProduct._id}`, formData)
+        axios.patch(`https://e-commerce-backend-fg1k.onrender.com/sellerProducts/${selectedProduct._id}`, formData)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     Swal.fire(

@@ -8,7 +8,7 @@ const Orders = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get("http://localhost:5000/allPayment")
+            .get("https://e-commerce-backend-fg1k.onrender.com/allPayment")
             .then((res) => {
                 setOrders(res.data);
                 setLoading(false);

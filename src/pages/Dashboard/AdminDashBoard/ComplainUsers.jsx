@@ -5,7 +5,7 @@ const ComplainUsers = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/userIssue")
+    fetch("https://e-commerce-backend-fg1k.onrender.com/userIssue")
       .then((res) => res.json())
       .then((data) => {
         setComplains(data);

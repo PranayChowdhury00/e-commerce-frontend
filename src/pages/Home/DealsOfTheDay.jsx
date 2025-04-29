@@ -8,7 +8,7 @@ const DealsOfTheDay = () => {
   const durationInSeconds = 3 * 60 * 60; // 3 hours
 
   useEffect(() => {
-   axios.get("http://localhost:5000/deals")
+   axios.get("https://e-commerce-backend-fg1k.onrender.com/deals")
       .then((res) => setDeals(res.data))
       .catch((err) => console.error('Failed to load deals:', err));
   }, []);
