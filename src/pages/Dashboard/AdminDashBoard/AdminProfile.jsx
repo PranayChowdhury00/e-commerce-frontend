@@ -23,7 +23,7 @@ const AdminProfile = () => {
       <div className="card bg-base-100 w-96 shadow-sm">
         <figure>
           <img
-            src={userData?.image}
+            src={userData?.photoURL}
             alt={userData?.name}
           />
         </figure>
