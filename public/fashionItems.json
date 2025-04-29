@@ -1,0 +1,174 @@
+{
+    "men": [
+      {
+        "name": "Shirt",
+        "category": "Topwear",
+        "type": "Formal",
+        "price": 25.99,
+        "age": "adult",
+        "size": ["M", "L", "XL"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://fabrilife.com/products/646c762a7496e-square.jpg"
+      },
+      {
+        "name": "T-Shirt",
+        "category": "Topwear",
+        "type": "Casual",
+        "price": 15.50,
+        "age": "adult",
+        "size": ["S", "M", "L", "XL"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://contents.mediadecathlon.com/p2397144/k$c16faffa3683000fed4e59108dd2147b/men-s-running-t-shirt-red-decathlon-8771124.jpg?f=1920x0&format=auto"
+      },
+      {
+        "name": "Pant",
+        "category": "Bottomwear",
+        "type": "Formal",
+        "price": 35.00,
+        "age": "adult",
+        "size": ["32", "34", "36"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://artisanclick.com/wp-content/uploads/2023/12/MG_4059-scaled.jpg"
+      },
+      {
+        "name": "Undergarments",
+        "category": "Innerwear",
+        "type": "Essential",
+        "price": 8.99,
+        "age": "adult",
+        "size": ["M", "L"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://images.othoba.com/images/thumbs/0601877_mens-boxer-combo-export-quality-assorted-cotton-stretch-underwear-for-bulk-sales.webp"
+      },
+      {
+        "name": "Shoes",
+        "category": "Footwear",
+        "type": "Formal",
+        "price": 49.99,
+        "age": "adult",
+        "size": ["9", "10", "11"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://bdonlinemart.com/wp-content/uploads/2024/08/3237119_Olive-300x300.webp"
+      },
+      {
+        "name": "Belt",
+        "category": "Accessory",
+        "type": "Leather",
+        "price": 12.00,
+        "age": "adult",
+        "size": ["M", "L"],
+        "gender": "male",
+        "currency": "USD",
+        "image": "https://www.batabd.com/cdn/shop/files/1_b70f4118-88a4-4170-bf8b-3eb5294e259d.jpg?v=1742785085"
+      }
+    ],
+    "women": [
+      {
+        "name": "Saree",
+        "category": "Traditional",
+        "type": "Silk",
+        "price": 40.00,
+        "age": "adult",
+        "size": ["One Size"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://i5.walmartimages.com/asr/3356c5fa-d578-4bdd-bba0-8562f6f85001.cf5f3e1d41ae74919e7f801fc981e880.jpeg"
+      },
+      {
+        "name": "Nighty",
+        "category": "Nightwear",
+        "type": "Comfort",
+        "price": 18.50,
+        "age": "adult",
+        "size": ["M", "L", "XL"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlhKzjwbCSSraDYG8eCei13zHWXl0pBG5KtQ&s"
+      },
+      {
+        "name": "Swimwear",
+        "category": "Activewear",
+        "type": "Beach",
+        "price": 29.99,
+        "age": "adult",
+        "size": ["S", "M", "L"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://www.modibodi.co.uk/cdn/shop/files/SWSORBLMELBT__MB_Teen_Swimwear_Performance_One_Piece_Electirc_Blue_33_Model_Koralei_Y12-14.jpg?v=1723517806&width=640"
+      },
+      {
+        "name": "Jeans",
+        "category": "Bottomwear",
+        "type": "Casual",
+        "price": 32.99,
+        "age": "adult",
+        "size": ["28", "30", "32"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1736527960-untitled-3-67815035563fa.jpg?crop=0.774xw:0.830xh;0.111xw,0.0871xh&resize=980:*"
+      },
+      {
+        "name": "Top",
+        "category": "Topwear",
+        "type": "Trendy",
+        "price": 22.99,
+        "age": "adult",
+        "size": ["S", "M", "L"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://m.media-amazon.com/images/I/61l9ah6a4iL._AC_SL1200_.jpg"
+      }
+    ],
+    "children": [
+      {
+        "name": "Shirt",
+        "category": "Topwear",
+        "type": "Casual",
+        "price": 12.00,
+        "age": "kids",
+        "size": ["XS", "S", "M"],
+        "gender": "unisex",
+        "currency": "USD",
+        "image": "https://m.media-amazon.com/images/I/91j7SonW7HL._AC_UL1500_.jpg"
+      },
+      {
+        "name": "Pant",
+        "category": "Bottomwear",
+        "type": "Casual",
+        "price": 14.99,
+        "age": "kids",
+        "size": ["XS", "S", "M"],
+        "gender": "unisex",
+        "currency": "USD",
+        "image": "https://image.made-in-china.com/202f0j00FZRViGkqZpbc/Wholesale-OEM-Children-Denim-Trousers-Autumn-Winter-Custom-Kids-Jeans-100-Cotton-Casual-Blue-Children-Pants.webp"
+      },
+      {
+        "name": "Girl Dress",
+        "category": "Topwear",
+        "type": "Fancy",
+        "price": 19.99,
+        "age": "kids",
+        "size": ["S", "M"],
+        "gender": "female",
+        "currency": "USD",
+        "image": "https://static-01.daraz.com.bd/p/2a771eb8ddc4e3927cbb3b400f0a8db1.jpg"
+      },
+      {
+        "name": "Shoes",
+        "category": "Footwear",
+        "type": "Casual",
+        "price": 17.00,
+        "age": "kids",
+        "size": ["9C", "10C", "11C"],
+        "gender": "unisex",
+        "currency": "USD",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/2/BO/HT/DZ/22625596/img-4639.JPG"
+      }
+    ]
+  }
+  

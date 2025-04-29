@@ -1,0 +1,82 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+const Orders = () => {
+    const [orders, setOrders] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        setLoading(true);
+        axios
+            .get("http://localhost:5000/allPayment")
+            .then((res) => {
+                setOrders(res.data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error(err.message);
+                setLoading(false);
+            });
+    }, []);
+    
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <span className="loading loading-ring loading-lg"></span>
+            </div>
+        );
+    }
+
+    return (
+        <div className="container mx-auto px-4 py-8">
+            <h1 className="text-3xl font-bold mb-8 text-center">Customer Orders</h1>
+            
+            {orders.length === 0 ? (
+                <div className="text-center py-12">
+                    <p className="text-xl">No orders found</p>
+                </div>
+            ) : (
+                <div className="overflow-x-auto">
+                    <table className="min-w-full bg-white rounded-lg overflow-hidden">
+                        <thead className="bg-gray-800 text-white">
+                            <tr>
+                                <th className="py-3 px-4 text-left">Customer Email</th>
+                                <th className="py-3 px-4 text-left">Product</th>
+                                <th className="py-3 px-4 text-left">Image</th>
+                                <th className="py-3 px-4 text-right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200">
+                            {orders.map((order, index) => (
+                                <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                                    <td className="py-4 px-4">{order.email}</td>
+                                    <td className="py-4 px-4 font-medium">{order.productName}</td>
+                                    <td className="py-4 px-4">
+                                        <img 
+                                            src={order.productImage} 
+                                            alt={order.productName} 
+                                            className="w-16 h-16 object-cover rounded"
+                                            onError={(e) => {
+                                                e.target.src = 'https://via.placeholder.com/100?text=No+Image';
+                                            }}
+                                        />
+                                    </td>
+                                    <td className="py-4 px-4 text-right">${order.productPrice.toFixed(2)}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    
+                    <div className="mt-6 text-right">
+                        <p className="text-lg font-semibold">
+                            Total Orders: {orders.length} | 
+                            Total Revenue: ${orders.reduce((sum, order) => sum + order.productPrice, 0).toFixed(2)}
+                        </p>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default Orders;

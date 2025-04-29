@@ -1,0 +1,123 @@
+[
+    {
+      "id": "1",
+      "name": "iPhone 14 Pro Max",
+      "price": 1199,
+      "discount": 10,
+      "description": "Apple iPhone 14 Pro Max with A16 Bionic chip and 48MP camera.",
+      "image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Deep-Purple-7300.jpg",
+      "category": "Mobiles",
+      "subCategory": "Apple"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S23 Ultra",
+      "price": 1099,
+      "discount": 15,
+      "description": "Flagship Samsung phone with 200MP camera and Snapdragon 8 Gen 2.",
+      "image": "https://www.custommacbd.com/cdn/shop/products/Galaxy-S23-Ultra-Lavender-Custom-Mac-BD.jpg?v=1675423376",
+      "category": "Mobiles",
+      "subCategory": "Samsung"
+    },
+    {
+      "id": "3",
+      "name": "MacBook Air M2",
+      "price": 999,
+      "discount": 5,
+      "description": "Apple MacBook Air with M2 chip and Retina display.",
+      "image": "https://computermania.com.bd/wp-content/uploads/2025/01/Dell-XPS-13-Plus-1.jpg",
+      "category": "Laptops",
+      "subCategory": "Apple"
+    },
+    {
+      "id": "4",
+      "name": "Dell XPS 13",
+      "price": 899,
+      "discount": 12,
+      "description": "Compact and powerful ultrabook with InfinityEdge display.",
+      "image": "https://computermania.com.bd/wp-content/uploads/2025/01/Dell-XPS-13-Plus-1.jpg",
+      "category": "Laptops",
+      "subCategory": "Dell"
+    },
+    {
+      "id": "5",
+      "name": "Sony WH-1000XM5",
+      "price": 399,
+      "discount": 10,
+      "description": "Industry-leading noise canceling headphones with amazing sound quality.",
+      "image": "https://sonysmart.com.bd/public/uploads/all/tVEoaFzkULgLu8ww4rXFiJGwRz10obUqJkLCUmUz.webp",
+      "category": "Headphones",
+      "subCategory": "Sony"
+    },
+    {
+      "id": "6",
+      "name": "AirPods Pro 2",
+      "price": 249,
+      "discount": 8,
+      "description": "Apple's AirPods with active noise cancellation and spatial audio.",
+      "image": "https://adminapi.applegadgetsbd.com/storage/media/large/AirPods-Pro-(2nd-generation)-USB%E2%80%90C-a-6909.jpg",
+      "category": "Headphones",
+      "subCategory": "Apple"
+    },
+    {
+      "id": "7",
+      "name": "Logitech MX Master 3S",
+      "price": 99,
+      "discount": 20,
+      "description": "Ergonomic wireless mouse with precision tracking.",
+      "image": "https://mcsolution.com.bd/wp-content/uploads/2022/09/Logitech-MX-Master-3S-Pale-Gray-in-Bangladesh-2022-MC-Solution-BD-scaled-2116x2116.webp",
+      "category": "Accessories",
+      "subCategory": "Mouse"
+    },
+    {
+      "id": "8",
+      "name": "Anker USB-C Hub",
+      "price": 49,
+      "discount": 10,
+      "description": "Multiport USB-C hub with HDMI, USB-A, and SD card reader.",
+      "image": "https://adminapi.applegadgetsbd.com/storage/media/large/3393-35976.jpg",
+      "category": "Accessories",
+      "subCategory": "Hub"
+    },
+    {
+      "id": "9",
+      "name": "Realme Narzo 60",
+      "price": 199,
+      "discount": 10,
+      "description": "Budget phone with great performance and AMOLED display.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYAf-bEmWyYiIkHso_exbZLopiqRSH-gypRw&s",
+      "category": "Mobiles",
+      "subCategory": "Realme"
+    },
+    {
+      "id": "10",
+      "name": "Asus ROG Strix G16",
+      "price": 1599,
+      "discount": 18,
+      "description": "Gaming laptop with powerful GPU and fast refresh rate.",
+      "image": "https://computermania.com.bd/wp-content/uploads/2025/01/ASUS-ROG-5-2.jpg",
+      "category": "Laptops",
+      "subCategory": "Asus"
+    },
+    {
+      "id": "11",
+      "name": "Boat Rockerz 550",
+      "price": 39,
+      "discount": 25,
+      "description": "Wireless over-ear headphones with deep bass and long battery life.",
+      "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/1104X1581/boAt_Rockerz_550_Over_Ear_Bluetooth_Head-boAt-bb340-320117.png",
+      "category": "Headphones",
+      "subCategory": "Boat"
+    },
+    {
+      "id": "12",
+      "name": "Samsung T7 SSD 1TB",
+      "price": 139,
+      "discount": 10,
+      "description": "Portable SSD with fast USB 3.2 Gen2 speeds.",
+      "image": "https://www.ultratech.com.bd/image/cache/catalog/ssd/samsung/t7-1tb/samsung-t7-1tb-usb-32-type-c-portable-ssd-2-500x500.jpg",
+      "category": "Accessories",
+      "subCategory": "Storage"
+    }
+  ]
+  

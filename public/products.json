@@ -1,0 +1,122 @@
+[
+  {
+    "name": "4K Action Camera",
+    "price": 129.99,
+    "originalPrice": 179.99,
+    "image": "https://www.presidentit.com.bd/image/product_image/800_image_size10.jpg",
+    "brand": "GoPro",
+    "rating": 4.7,
+    "description": "Waterproof 4K action camera with wide-angle lens and stabilization for outdoor adventures.",
+    "section": "trending"
+  },
+  {
+    "name": "Smart Watch Series 9",
+    "price": 199.99,
+    "originalPrice": 249.99,
+    "image": "https://www.startech.com.bd/image/cache/catalog/watch/apple/watch-series-9/watch-series-9-midnight-01-500x500.webp",
+    "brand": "Apple",
+    "rating": 4.8,
+    "description": "Advanced smartwatch with health monitoring, fitness tracking, and customizable watch faces.",
+    "section": "trending"
+  },
+  {
+    "name": "Smart Home Speaker",
+    "price": 59.99,
+    "originalPrice": 89.99,
+    "image": "https://www.famousgadget.com.bd/image/cache/catalog/0-speaker/Smart%20Speaker/Echo%20Dot%204th/amazon-echo-dot-4th-generation-smart-speaker-with-alexa-in-bd-at-bd2-1000x1000w.jpeg-250x250.jpeg",
+    "brand": "Amazon Echo",
+    "rating": 4.5,
+    "description": "Voice-controlled smart speaker with Alexa for music, weather, and smart home control.",
+    "section": "trending"
+  },
+  {
+    "name": "Noise-Isolating Headset",
+    "price": 79.99,
+    "originalPrice": 119.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrjsIoIrroJF6ksvdZFBsQMejmr3y3r2d6Pg&s",
+    "brand": "HyperX",
+    "rating": 4.6,
+    "description": "Comfortable over-ear headset with crystal-clear mic and sound isolation for gaming.",
+    "section": "trending"
+  },
+  {
+    "name": "Ultra Slim Laptop Stand",
+    "price": 24.99,
+    "originalPrice": 39.99,
+    "image": "https://m.media-amazon.com/images/I/61rZLNHddhL._AC_SL1500_.jpg",
+    "brand": "Nulaxy",
+    "rating": 4.4,
+    "description": "https://lumiproduct.oss-cn-hongkong.aliyuncs.com/2022/08/15/62f9a3ba327ffa00020fbdd9.jpg",
+    "section": "trending"
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "price": 149.99,
+    "originalPrice": 199.99,
+    "image": "https://cubicdesign.com.bd/wp-content/uploads/2024/08/ergonomic-chair-black-color-front-view.webp",
+    "brand": "Herman Miller",
+    "rating": 4.7,
+    "description": "Ergonomic design with lumbar support for long hours of work or gaming.",
+    "section": "trending"
+  },
+  {
+    "name": "Mini Drone with Camera",
+    "price": 99.99,
+    "originalPrice": 139.99,
+    "image": "https://i0.wp.com/droneplacebd.com/wp-content/uploads/2024/10/PRODUCT-THUMB-MINI4K-01-v1.jpg?fit=800%2C600&ssl=1",
+    "brand": "DJI",
+    "rating": 4.5,
+    "description": "Compact drone with HD camera, GPS, and real-time video transmission.",
+    "section": "trending"
+  },
+  {
+    "name": "LED Light Strip",
+    "price": 19.99,
+    "originalPrice": 29.99,
+    "image": "https://www.bdshop.com/pub/media/catalog/product/cache/a762498fd6e92192d841c2d6c87195e8/5/-/5-meter-sonoff-rgb-strip-light-extension-compatible-with-sonoff-l1l2-led-strip-light-5050rgb-in-bd-at-bdshopcom.png",
+    "brand": "Govee",
+    "rating": 4.6,
+    "description": "Color-changing LED strip with remote and app control for room decoration.",
+    "section": "trending"
+  },
+  {
+    "name": "Gaming Controller",
+    "price": 54.99,
+    "originalPrice": 69.99,
+    "image": "https://www.ultratech.com.bd/image/cache/catalog/gamepad/fantech/fantech-wgp13-shooter-ii-gaming-controller-2-500x500.jpg",
+    "brand": "Xbox",
+    "rating": 4.8,
+    "description": "Wireless controller with textured grip, responsive triggers, and Bluetooth support.",
+    "section": "trending"
+  },
+  {
+    "name": "Mechanical Pencil Set",
+    "price": 14.99,
+    "originalPrice": 22.99,
+    "image": "https://m.media-amazon.com/images/I/719Z6QPhosL._AC_SL1500_.jpg",
+    "brand": "Pentel",
+    "rating": 4.5,
+    "description": "Durable and refillable mechanical pencils with ergonomic grip for writing and sketching.",
+    "section": "trending"
+  },
+  {
+    "name": "USB-C Hub",
+    "price": 34.99,
+    "originalPrice": 49.99,
+    "image": "https://www.techlandbd.com/image/cache/catalog/Accessories/USB%20HUB/HAVIT/HB41/Havit%20HV-HB41%20Type%20C%20Aluminium%20Alloy%204%20Port%20HUB-250x250.jpg",
+    "brand": "Anker",
+    "rating": 4.7,
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader and fast data transfer.",
+    "section": "trending"
+  },
+  {
+    "name": "Electric Milk Frother",
+    "price": 39.99,
+    "originalPrice": 59.99,
+    "image": "https://img.drz.lazcdn.com/static/bd/p/5dcda3864d362050fd77f7b675a6e581.jpg_720x720q80.jpg",
+    "brand": "Nespresso",
+    "rating": 4.6,
+    "description": "Make creamy froth for cappuccinos, lattes, and hot chocolates at home.",
+    "section": "trending"
+  }
+]

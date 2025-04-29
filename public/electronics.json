@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Ceramic Table Vase",
+    "category": "home",
+    "price": 29.99,
+    "rating": 4.5,
+    "image": "https://m.media-amazon.com/images/I/61UeG8BT1mL.jpg",
+    "description": "Elegant ceramic vase perfect for your living room or dining table."
+  },
+  {
+    "id": 2,
+    "name": "Outdoor Patio Set",
+    "category": "garden",
+    "price": 399.99,
+    "rating": 4.8,
+    "image": "https://m.media-amazon.com/images/I/81AlSPjYjQS._AC_SL1500_.jpg",
+    "description": "Comfortable 4-piece patio set for your garden relaxation."
+  },
+  {
+    "id": 3,
+    "name": "Indoor Herb Garden Kit",
+    "category": "garden",
+    "price": 34.95,
+    "rating": 4.3,
+    "image": "https://www.thespruce.com/thmb/sQoQB_Q2pTuqCmA_mnZllgaciY4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spr-indoor-smart-gardens-test-click-grow-herb-margot-cavin-6-90ba3e9b684e43c58d7b87967ae4e807.jpeg",
+    "description": "Grow your own herbs indoors with this complete starter kit."
+  },
+  {
+    "id": 4,
+    "name": "Decorative Throw Pillow",
+    "category": "home",
+    "price": 24.99,
+    "rating": 4.2,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVSfxj1gPFdXXvozbffhJaa6QIgvyWdfyL2g&s",
+    "description": "Soft and stylish pillow to enhance your sofa or bed."
+  },
+  {
+    "id": 5,
+    "name": "Watering Can",
+    "category": "garden",
+    "price": 19.99,
+    "rating": 4.0,
+    "image": "https://i.ebayimg.com/images/g/CmIAAOSwbeVmg9uP/s-l1200.jpg",
+    "description": "Sturdy metal watering can with comfortable handle."
+  },
+  {
+    "id": 6,
+    "name": "Wall Art Set",
+    "category": "home",
+    "price": 89.99,
+    "rating": 4.6,
+    "image": "https://i5.walmartimages.com/seo/PixonSign-Framed-Canvas-Wall-Art-Set-3-Abstract-Mountain-Nature-Painting-Prints-Watercolor-Landscape-Modern-Living-Room-Bedroom-Office-24-x36-x3-Natu_62eddbf5-3f0f-4cba-928c-abfb4d21386e.4d9603f5662b08a89393e047c90d54ab.jpeg",
+    "description": "Set of 3 modern abstract paintings for your walls."
+  },
+  {
+    "id": 7,
+    "name": "Gardening Tool Set",
+    "category": "garden",
+    "price": 45.50,
+    "rating": 4.7,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNAVQsw1hzWW0zswxOlT9D8PvsiY3gW8UVg&s",
+    "description": "Complete set of 6 essential gardening tools."
+  },
+  {
+    "id": 8,
+    "name": "Cozy Blanket",
+    "category": "home",
+    "price": 39.99,
+    "rating": 4.4,
+    "image": "https://media.istockphoto.com/id/1389446285/photo/black-couple-in-love-laughing.jpg?s=612x612&w=0&k=20&c=b03dMMRfuifV0xQEOEmxgTtjnpoo3l0CLj18O08gXl8=",
+    "description": "Soft and warm blanket for your couch or bed."
+  },
+  {
+    "id": 9,
+    "name": "Hanging Planters",
+    "category": "garden",
+    "price": 32.99,
+    "rating": 4.1,
+    "image": "https://m.media-amazon.com/images/I/61Mw1heodML._AC_SL1276_.jpg",
+    "description": "Set of 3 macrame hanging planters for indoor plants."
+  },
+  {
+    "id": 10,
+    "name": "Desk Organizer",
+    "category": "home",
+    "price": 27.50,
+    "rating": 4.3,
+    "image": "https://m.media-amazon.com/images/I/71+I0xZsYTL._AC_SL1500_.jpg",
+    "description": "Minimalist wooden desk organizer for your home office."
+  },
+  {
+    "id": 11,
+    "name": "Outdoor Solar Lights",
+    "category": "garden",
+    "price": 49.99,
+    "rating": 4.5,
+    "image": "https://m.media-amazon.com/images/I/717V7VXwNCL._AC_SL1500_.jpg",
+    "description": "Set of 6 solar-powered LED lights for garden pathways."
+  },
+  {
+    "id": 12,
+    "name": "Coffee Table",
+    "category": "home",
+    "price": 199.99,
+    "rating": 4.7,
+    "image": "https://dd3ka9h4chfr8.cloudfront.net/image/725136000567/image_88m4bomc3d3hvbts6mm1m0kr5j/-S1200x1200-FJPG/235180-004_ESS_1.tif",
+    "description": "Modern wooden coffee table with storage space."
+  },
+  {
+    "id": 13,
+    "name": "Raised Garden Bed",
+    "category": "garden",
+    "price": 129.99,
+    "rating": 4.6,
+    "image": "https://png.pngtree.com/background/20230606/original/pngtree-raised-vegetable-garden-beds-are-more-productive-and-easier-to-maintain-picture-image_2887478.jpg",
+    "description": "4x8 ft cedar raised garden bed for vegetables and flowers."
+  },
+  {
+    "id": 14,
+    "name": "Scented Candles Set",
+    "category": "home",
+    "price": 35.00,
+    "rating": 4.4,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JeaCyP628uE3DqllK09zFKBsPUdtrBeeTQ&s",
+    "description": "Set of 3 luxury scented candles in elegant jars."
+  },
+  {
+    "id": 15,
+    "name": "Bird Feeder",
+    "category": "garden",
+    "price": 22.99,
+    "rating": 4.2,
+    "image": "https://static-01.daraz.com.bd/p/a8e311fd0468fd7dfe3a5d5c533855f5.jpg",
+    "description": "Squirrel-proof bird feeder for your garden visitors."
+  },
+  {
+    "id": 16,
+    "name": "Throw Rug",
+    "category": "home",
+    "price": 59.99,
+    "rating": 4.3,
+    "image": "https://media.istockphoto.com/id/926182182/photo/vintage-tv-next-to-couch.jpg?s=612x612&w=0&k=20&c=2GrL1hXX8QZs54deApzjdbhJ9HyFpNnrbmE6TcidJ-Q=",
+    "description": "Soft and durable 5x7 ft area rug for your living space."
+  },
+  {
+    "id": 17,
+    "name": "Garden Bench",
+    "category": "garden",
+    "price": 179.99,
+    "rating": 4.8,
+    "image": "https://media.gettyimages.com/id/171581733/photo/flower-basket-hanging-on-wagon-wheel-by-garden-bench.jpg?s=612x612&w=gi&k=20&c=u1e5fm6zOPl022xcrd87DX-vA4HzGAzeDxIy2gLxcKY=",
+    "description": "Sturdy wooden bench for your garden or patio."
+  },
+  {
+    "id": 18,
+    "name": "Decorative Mirror",
+    "category": "home",
+    "price": 89.95,
+    "rating": 4.5,
+    "image": "https://m.media-amazon.com/images/I/41Svk9jcv9L._AC_US750_.jpg",
+    "description": "Elegant round mirror with wooden frame for your wall."
+  },
+  {
+    "id": 19,
+    "name": "Potting Soil",
+    "category": "garden",
+    "price": 14.99,
+    "rating": 4.0,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmQ54_eEq9Om1gsZn2gqHUcxcmWHmC3wDNg&s",
+    "description": "Premium organic potting soil for all your plants."
+  },
+  {
+    "id": 20,
+    "name": "Bedside Lamp",
+    "category": "home",
+    "price": 45.00,
+    "rating": 4.4,
+    "image": "https://www.gadstyle.com/wp-content/uploads/2024/10/led-mushroom-dimmable-mood-light-bedside-lamp-small-table-lamp-1.webp",
+    "description": "Modern LED bedside lamp with adjustable brightness."
+  }
+]
