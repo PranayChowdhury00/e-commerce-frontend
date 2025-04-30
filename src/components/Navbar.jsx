@@ -23,14 +23,16 @@ const Navbar = () => {
   const [wishListItems, setWishListItems] = useState([]);
   const [userData, setUserData] = useState([]);
   const [notifications, setNotifications] = useState([]);
-  
+  const [searchData, setSearchData] = useState([]);
+  const [results, setResults] = useState([]);
+
   useEffect(() => {
     axios
       .get("https://e-commerce-backend-fg1k.onrender.com/users")
       .then((res) => setUserData(res.data))
       .catch((err) => console.log(err));
   }, [user?.email]);
-  
+
   const isAdmin = userData?.some(
     (data) => data.email === user?.email && data.status === "admin"
   );
@@ -76,14 +78,34 @@ const Navbar = () => {
     });
   };
 
+  useEffect(() => {
+    axios
+      .get("https://e-commerce-backend-fg1k.onrender.com/electronicsItemSearch")
+      .then((res) => {
+        console.log("Search Data:", res.data); // Debug: Inspect API response
+        setSearchData(res.data);
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }, []);
+
   const handleSearch = (e) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-      setSearchQuery("");
+    if (searchQuery.trim() !== "") {
+      // Filter items based on model, brand, or description
+      const filtered = searchData.filter(
+        (item) =>
+          (item.model && item.model.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (item.brand && item.brand.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (item.description && item.description.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+      setResults(filtered);
+      console.log("Search Results:", filtered); // Debug: Inspect filtered results
+    } else {
+      setResults([]);
     }
   };
-  
 
   useEffect(() => {
     if (user?.email) {
@@ -161,9 +183,19 @@ const Navbar = () => {
             <form onSubmit={handleSearch} className="relative w-full">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Search by model or brand..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  // Real-time filtering as user types
+                  const filtered = searchData.filter(
+                    (item) =>
+                      (item.model && item.model.toLowerCase().includes(e.target.value.toLowerCase())) ||
+                      (item.brand && item.brand.toLowerCase().includes(e.target.value.toLowerCase())) ||
+                      (item.description && item.description.toLowerCase().includes(e.target.value.toLowerCase()))
+                  );
+                  setResults(e.target.value.trim() !== "" ? filtered : []);
+                }}
                 className="input input-bordered w-full pr-10 focus:outline-none"
               />
               <button
@@ -172,6 +204,19 @@ const Navbar = () => {
               >
                 <FaSearch className="h-4 w-4" />
               </button>
+              {results.length > 0 && (
+                <ul className="absolute w-full bg-white text-black rounded-lg shadow-lg mt-2 z-10 max-h-64 overflow-y-auto">
+                  {results.map((item) => (
+                    <Link to={`/product-info/${item._id}`} key={item._id}>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      >
+                        <span className="font-semibold">{item.model}</span> – {item.brand}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              )}
             </form>
           </div>
 
@@ -267,9 +312,19 @@ const Navbar = () => {
           <form onSubmit={handleSearch} className="relative">
             <input
               type="text"
-              placeholder="Search products..."
+              placeholder="Search by model or brand..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                // Real-time filtering as user types
+                const filtered = searchData.filter(
+                  (item) =>
+                    (item.model && item.model.toLowerCase().includes(e.target.value.toLowerCase())) ||
+                    (item.brand && item.brand.toLowerCase().includes(e.target.value.toLowerCase())) ||
+                    (item.description && item.description.toLowerCase().includes(e.target.value.toLowerCase()))
+                );
+                setResults(e.target.value.trim() !== "" ? filtered : []);
+              }}
               className="input input-bordered w-full pr-10 focus:outline-none"
             />
             <button
@@ -278,6 +333,19 @@ const Navbar = () => {
             >
               <FaSearch className="h-4 w-4" />
             </button>
+            {results.length > 0 && (
+              <ul className="absolute w-full bg-white text-black rounded-lg shadow-lg mt-2 z-10 max-h-64 overflow-y-auto">
+                {results.map((item) => (
+                  <Link to={`/singleProduct/${item._id}`} key={item._id}>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    >
+                      <span className="font-semibold">{item.model}</span> – {item.brand}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            )}
           </form>
         </div>
       </div>
