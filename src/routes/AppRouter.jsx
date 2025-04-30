@@ -39,6 +39,7 @@ import AllPayment from "../pages/Dashboard/AdminDashBoard/AllPayment";
 import SettingsPage from "../pages/Dashboard/AdminDashBoard/SettingsPage";
 
 import ProductDetails2 from "../pages/Home/ProductDetails2";
+import FeaturedSellerDetails from "../pages/Home/FeaturedSellerDetails";
 
 
   const router = createBrowserRouter([
@@ -101,6 +102,10 @@ import ProductDetails2 from "../pages/Home/ProductDetails2";
         {
           path:'/product-info/:id',
           element:<ProductDetails2></ProductDetails2>
+        },
+        {
+          path:'/featuredSellerProduct/:id',
+          element:<FeaturedSellerDetails></FeaturedSellerDetails>
         }
 
       ]

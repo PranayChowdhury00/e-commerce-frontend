@@ -56,7 +56,7 @@ const FeaturedSellerItems = () => {
                 <h3 className="text-xl font-semibold text-gray-800">{item.itemName}</h3>
                 <p className="text-gray-500 text-sm">{item.itemBrand}</p>
                 <p className="text-primary font-bold text-lg">${item.itemPrice}</p>
-                <Link to={`/product/${item._id}`} className="block">
+                <Link to={`/featuredSellerProduct/${item._id}`} className="block">
                 <button className="mt-2 w-full bg-primary text-white py-2 rounded hover:bg-secondary transition duration-300">
                   View Details
                 </button>
