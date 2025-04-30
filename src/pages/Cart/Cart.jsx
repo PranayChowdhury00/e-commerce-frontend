@@ -4,7 +4,6 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
-
 const Cart = () => {
   const { user } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState(null);
@@ -17,7 +16,7 @@ const Cart = () => {
         .get(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${user.email}`)
         .then((res) => {
           setCartItems(res.data);
-          const totalPrice = res.data.reduce((acc, item) => acc + item.price, 0);
+          const totalPrice = res.data.reduce((acc, item) => acc + Number(item.price), 0);
           setTotal(totalPrice);
         })
         .catch((err) => console.log(err));
@@ -32,7 +31,7 @@ const Cart = () => {
         if (res.data.deletedCount > 0) {
           const updatedCart = cartItems.filter((item) => item._id !== id);
           setCartItems(updatedCart);
-          const newTotal = updatedCart.reduce((acc, item) => acc + item.price, 0);
+          const newTotal = updatedCart.reduce((acc, item) => acc + Number(item.price), 0);
           setTotal(newTotal);
           Swal.fire({
             position: "top-end",
@@ -41,11 +40,9 @@ const Cart = () => {
             showConfirmButton: false,
             timer: 1500
           });
-         
         }
       })
       .catch((err) => {
-        
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -84,9 +81,13 @@ const Cart = () => {
             </figure>
             <div className="card-body">
               <h2 className="card-title">{item.name}</h2>
-              <p className="text-lg font-medium">Price: ${item.price}</p>
+              <p className="text-lg font-medium">
+                Price: ${Number(item.price).toFixed(2)}
+              </p>
               <div className="card-actions justify-end mt-4">
-                <Link to='/checkout'><button className="btn btn-primary">Buy Now</button></Link>
+                <Link to="/checkout">
+                  <button className="btn btn-primary">Buy Now</button>
+                </Link>
                 <button
                   onClick={() => handleRemove(item._id)}
                   className="btn btn-error btn-outline"
@@ -102,7 +103,7 @@ const Cart = () => {
       {/* Total Price */}
       <div className="text-right mt-4">
         <h2 className="text-2xl font-semibold">
-          Total: <span className="text-green-600">${total.toFixed(2)}</span>
+          Total: <span className="text-green-600">${Number(total).toFixed(2)}</span>
         </h2>
       </div>
     </div>

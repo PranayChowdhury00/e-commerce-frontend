@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const FeaturedSellerDetails = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [currentProduct, setCurrentProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-
+const{user}=useContext(AuthContext);
   useEffect(() => {
     axios.get(`https://e-commerce-backend-fg1k.onrender.com/sellerProducts`)
       .then(res => {
@@ -19,6 +21,45 @@ const FeaturedSellerDetails = () => {
       .catch(err => console.error(err))
       .finally(() => setLoading(false));
   }, [id]);
+console.log("products",currentProduct)
+  const handleAddToCart = () => {
+    if (!user?.email) {
+      return Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your cart.",
+      });
+    }
+
+    const cartItem = {
+      productId: currentProduct._id,
+      image: currentProduct.itemImage,
+      name: currentProduct.itemName,
+      price: currentProduct.itemPrice,
+      email: user.email,
+    };
+
+    axios
+      .post("https://e-commerce-backend-fg1k.onrender.com/cartItems", cartItem)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Added to cart",
+          text: `${currentProduct.itemName} has been added to your cart.`,
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "Something went wrong while adding to cart.",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      });
+  };
 
   if (loading) {
     return (
@@ -48,7 +89,7 @@ const FeaturedSellerDetails = () => {
           <p className="text-2xl font-bold text-primary mb-4">${currentProduct.itemPrice}</p>
           <p className="mb-6">{currentProduct.itemDescription}</p>
           
-          <button className="bg-primary text-white px-6 py-2 rounded hover:bg-secondary transition">
+          <button onClick={handleAddToCart} className="bg-primary text-white px-6 py-2 rounded hover:bg-secondary transition">
             Add to Cart
           </button>
         </div>
