@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const FeaturedSellerItems = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const {user}=useContext(AuthContext)
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
@@ -56,11 +57,14 @@ const FeaturedSellerItems = () => {
                 <h3 className="text-xl font-semibold text-gray-800">{item.itemName}</h3>
                 <p className="text-gray-500 text-sm">{item.itemBrand}</p>
                 <p className="text-primary font-bold text-lg">${item.itemPrice}</p>
-                <Link to={`/featuredSellerProduct/${item._id}`} className="block">
-                <button className="mt-2 w-full bg-primary text-white py-2 rounded hover:bg-secondary transition duration-300">
-                  View Details
-                </button>
-                </Link>
+                {
+                  user ?(<Link to={`/featuredSellerProduct/${item._id}`} className="block">
+                    <button className="mt-2 w-full bg-primary text-white py-2 rounded hover:bg-secondary transition duration-300">
+                      View Details
+                    </button>
+                    </Link>)
+                    : <button className="btn" disabled>View Details</button>
+                }
               </div>
             </div>
           ))}
