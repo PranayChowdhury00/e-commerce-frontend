@@ -1,6 +1,8 @@
-# 🛒 MERN Stack E-Commerce Website
+# 🛒  E-Commerce Website
 
-Welcome to the MERN E-Commerce project! This is a fully functional, modern e-commerce web application built using the MERN stack (MongoDB, Express, React, Node.js). The site allows users to browse products, add them to a cart, and go through a simulated checkout. Admins can manage products and users.
+## Project Description
+
+This e-commerce frontend, built with React and hosted on Vercel, offers a modern online shopping experience. Users can browse a diverse product catalog, view detailed product information, and manage their shopping cart by adding, removing, or updating items. The responsive design ensures seamless navigation on desktop and mobile devices. Additional features include a simulated checkout process (extendable with payment gateways) and optional search or filtering capabilities.
 
 ## 🌐 Live Demo
 
