@@ -30,7 +30,7 @@ const Notification = () => {
   const isApproved = seller.some(s => s.status === "approved");
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-700 px-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
       <div className="max-w-xl w-full bg-white shadow-lg rounded-xl p-8 text-center">
         {isApproved ? (
           <>
