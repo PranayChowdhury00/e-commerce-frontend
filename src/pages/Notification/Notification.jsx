@@ -1,17 +1,18 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Notification = () => {
   const [seller, setSeller] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+const {user}=useContext(AuthContext);
   useEffect(() => {
     const fetchSellerStatus = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("https://e-commerce-backend-fg1k.onrender.com/seller");
+        const res = await axios.get(`https://e-commerce-backend-fg1k.onrender.com/seller/${user?.email}`);
         setSeller(res.data);
       } catch (err) {
         setError("Failed to fetch seller data");
@@ -22,13 +23,14 @@ const Notification = () => {
     };
 
     fetchSellerStatus();
-  }, []);
+  }, [user?.email]);
 
   if (loading) return <span className="loading loading-spinner loading-lg flex justify-center items-center"></span>;
   if (error) return <div className="text-center text-red-500 py-10">{error}</div>;
 
   const isApproved = seller.some(s => s.status === "approved");
-
+console.log(isApproved)
+console.log(seller)
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
       <div className="max-w-xl w-full bg-white shadow-lg rounded-xl p-8 text-center">

@@ -152,12 +152,24 @@ console.log(product)
           </div>
 
           <div className="flex gap-4">
-            <button
+            {
+              user?(
+                <button
               className="btn btn-primary flex-1"
               onClick={handleAddToCart}
             >
               Add to Cart
             </button>
+              ):
+              (
+                <button disabled
+              className="btn btn-primary  w-30"
+              onClick={handleAddToCart}
+            >
+              Add to Cart
+            </button>
+              )
+            }
 
            
           </div>

@@ -142,7 +142,8 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [user?.email]);
 
-
+const isApproved = notifications.some(s => s.status === "approved");
+console.log(isApproved)
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -244,23 +245,35 @@ useEffect(() => {
           <div className="flex items-center gap-1 sm:gap-2">
             {/* Notifications - Hidden on small screens */}
             {
-              isAdmin?
-              <div className="indicator">
-                <IoMdNotificationsOutline className="h-5 w-5" />
-                <span className="badge badge-sm indicator-item bg-primary text-white">
-                  {user ? notifications.length : 0}
-                </span>
-              </div>
-              
-            :<Link to="/notification" className="hidden sm:flex btn btn-ghost btn-circle">
-            <div className="indicator">
-              <IoMdNotificationsOutline className="h-5 w-5" />
-              <span className="badge badge-sm indicator-item bg-primary text-white">
-                {user ? notifications.length : 0}
-              </span>
-            </div>
-          </Link>
-            }
+  isAdmin ? (
+    <div className="indicator">
+      <IoMdNotificationsOutline className="h-5 w-5" />
+      <span className="badge badge-sm indicator-item bg-primary text-white">
+        {user ? notifications.length : 0}
+      </span>
+    </div>
+  ) : isApproved === 'true' ? (
+    <Link to="/notification" className="hidden sm:flex btn btn-ghost btn-circle">
+      <div className="indicator">
+        <IoMdNotificationsOutline className="h-5 w-5" />
+        <span className="badge badge-sm indicator-item bg-primary text-white">
+          {user ? notifications.length : 0}
+        </span>
+      </div>
+    </Link>
+  ) : (
+    <Link to="/notification" className="hidden sm:flex btn btn-ghost btn-circle">
+      <div className="indicator">
+        <IoMdNotificationsOutline className="h-5 w-5" />
+        <span className="badge badge-sm indicator-item bg-primary text-white">
+          0
+        </span>
+      </div>
+    </Link>
+  )
+}
+
+
 
             {/* Wishlist */}
             <Link to="/wishlist" className="btn btn-ghost btn-circle">

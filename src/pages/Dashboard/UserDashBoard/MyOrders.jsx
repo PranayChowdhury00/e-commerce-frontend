@@ -11,7 +11,7 @@ const MyOrders = () => {
     if (user?.email) {
       setLoading(true);
       axios
-        .get(`/payment/${user.email}`)
+        .get(`https://e-commerce-backend-fg1k.onrender.com/payment/${user.email}`)
         .then((res) => {
           setOrders(res.data);
           setLoading(false);
@@ -66,7 +66,7 @@ const MyOrders = () => {
       <h1 className="text-2xl font-bold mb-6">My Orders</h1>
       {orders.length === 0 ? (
         <div className="flex justify-center items-center h-40">
-          <p className="text-xl font-semibold text-gray-500">Your WishList is Empty.</p>
+          <p className="text-xl font-semibold text-gray-500">Your cart is Empty. Order Something!!</p>
         </div>
       ) : (
         <table className="table">
