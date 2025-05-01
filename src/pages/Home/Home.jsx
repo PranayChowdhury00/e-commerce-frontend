@@ -11,22 +11,25 @@ import NewsletterCTA from './NewsletterCTA';
 import Testimonials from './Testimonials';
 import ContactUs from './ContactUs';
 import FeaturedSellerItems from './FeaturedSellerItems';
+import FAQSection from './FAQSection';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <DealsOfTheDay></DealsOfTheDay>
+            <CategoryPage></CategoryPage>
             <FeaturedProducts></FeaturedProducts>
             <TrendingSection></TrendingSection>
-            <NewsletterCTA></NewsletterCTA>
-            <CategoryPage></CategoryPage>
-            <BrandsCarousel></BrandsCarousel>
-            <DealsOfTheDay></DealsOfTheDay>
-            <WhyChooseUs></WhyChooseUs>
             <NewArrivals></NewArrivals>
-            <Testimonials></Testimonials>
+            <WhyChooseUs></WhyChooseUs>
+            <BrandsCarousel></BrandsCarousel>
             <FeaturedSellerItems></FeaturedSellerItems>
+            <Testimonials></Testimonials>
+            <NewsletterCTA></NewsletterCTA>
+            <FAQSection></FAQSection>
             <ContactUs></ContactUs>
+
         </div>
     );
 };

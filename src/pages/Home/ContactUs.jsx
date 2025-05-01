@@ -90,7 +90,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-12 px-4 md:px-10">
+    <section id="contact" className="bg-white dark:bg-gray-900 py-12 px-4 md:px-10">
       <div
         className="max-w-5xl mx-auto shadow-lg rounded-xl p-8 md:p-12 bg-white dark:bg-gray-800"
         data-aos="fade-up"

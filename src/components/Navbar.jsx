@@ -82,7 +82,7 @@ const Navbar = () => {
     axios
       .get("https://e-commerce-backend-fg1k.onrender.com/electronicsItemSearch")
       .then((res) => {
-        console.log("Search Data:", res.data); // Debug: Inspect API response
+       
         setSearchData(res.data);
       })
       .catch((err) => {
@@ -243,14 +243,24 @@ useEffect(() => {
           {/* Icons - Adjusted spacing for small screens */}
           <div className="flex items-center gap-1 sm:gap-2">
             {/* Notifications - Hidden on small screens */}
-            <Link to="/notifications" className="hidden sm:flex btn btn-ghost btn-circle">
+            {
+              isAdmin?
               <div className="indicator">
                 <IoMdNotificationsOutline className="h-5 w-5" />
                 <span className="badge badge-sm indicator-item bg-primary text-white">
                   {user ? notifications.length : 0}
                 </span>
               </div>
-            </Link>
+              
+            :<Link to="/notification" className="hidden sm:flex btn btn-ghost btn-circle">
+            <div className="indicator">
+              <IoMdNotificationsOutline className="h-5 w-5" />
+              <span className="badge badge-sm indicator-item bg-primary text-white">
+                {user ? notifications.length : 0}
+              </span>
+            </div>
+          </Link>
+            }
 
             {/* Wishlist */}
             <Link to="/wishlist" className="btn btn-ghost btn-circle">

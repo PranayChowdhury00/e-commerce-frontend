@@ -10,7 +10,7 @@ const ProductDetails2 = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { user } = useContext(AuthContext);
-
+console.log(product)
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -29,40 +29,7 @@ const ProductDetails2 = () => {
     fetchProduct();
   }, [id]);
 
-  // console.log("data",data)
-
-  // useEffect(() => {
-  //     if (!product?._id) return;
-
-  //     const cartItem = {
-  //       productId: product._id,
-  //       image: product.images[0],
-  //       name: product.model,
-  //       price: product.price,
-  //       email:user?.email
-  //     };
-
-  //     axios.post('https://e-commerce-backend-fg1k.onrender.com/cartItems', cartItem)
-  //       .then(() => {
-  //         Swal.fire({
-  //           icon: 'success',
-  //           title: 'Added to cart',
-  //           text: `${product.model} has been added to your cart.`,
-  //           timer: 2000,
-  //           showConfirmButton: false
-  //         });
-  //       })
-  //       .catch(() => {
-  //         Swal.fire({
-  //           icon: 'error',
-  //           title: 'Failed',
-  //           text: 'Something went wrong while adding to cart.',
-  //           timer: 2000,
-  //           showConfirmButton: false
-  //         });
-  //       });
-
-  //   }, [product._id, product.images, product.model, product.price, user?.email]);
+  
 
   const handleAddToCart = () => {
     if (!user?.email) {
