@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-
 import Swal from "sweetalert2";
+
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -32,8 +33,9 @@ const {user}=useContext(AuthContext);
     axios
       .post("https://e-commerce-backend-fg1k.onrender.com/cartItems", cartItem)
       .then((res) => {
-        if (res.data.insertedId) {
-          Swal.fire({
+        console.log(res.data)
+        if (res.data.insertedId || res.status === 200) {
+            Swal.fire({
             position: "top-end",
             icon: "success",
             title: "Product added to cart successfully!",

@@ -106,22 +106,42 @@ const Navbar = () => {
       setResults([]);
     }
   };
-
-  useEffect(() => {
-    if (user?.email) {
+// Cart polling every 5 seconds
+useEffect(() => {
+  let interval;
+  if (user?.email) {
+    const fetchCart = () => {
       axios
         .get(`https://e-commerce-backend-fg1k.onrender.com/cartItems/${user.email}`)
         .then((res) => setCartItems(res.data))
         .catch((err) => console.log(err));
-    }
-  }, [user?.email]);
+    };
 
-  useEffect(() => {
-    axios
-      .get(`https://e-commerce-backend-fg1k.onrender.com/wishList/${user?.email}`)
-      .then((res) => setWishListItems(res.data))
-      .catch((err) => console.log(err));
-  }, [user?.email]);
+    fetchCart(); // Initial fetch
+    interval = setInterval(fetchCart, 5000); // Poll every 5 seconds
+  }
+
+  return () => clearInterval(interval);
+}, [user?.email]);
+
+// Wishlist polling every 5 seconds
+useEffect(() => {
+  let interval;
+  if (user?.email) {
+    const fetchWishlist = () => {
+      axios
+        .get(`https://e-commerce-backend-fg1k.onrender.com/wishList/${user.email}`)
+        .then((res) => setWishListItems(res.data))
+        .catch((err) => console.log(err));
+    };
+
+    fetchWishlist(); // Initial fetch
+    interval = setInterval(fetchWishlist, 5000); // Poll every 5 seconds
+  }
+
+  return () => clearInterval(interval);
+}, [user?.email]);
+
 
   const isActive = (path) => location.pathname === path;
 
